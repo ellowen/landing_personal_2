@@ -1491,7 +1491,8 @@ section,
   justify-content: space-between;
   padding: 15px;
   border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
-  background-color: var(--surface-color); /* Ajustado al color de fondo para superficies */
+  /* background-color: var(--surface-color); Ajustado al color de fondo para superficies */
+  background-color: #f9f9f9; /* Ajustado al color de fondo para superficies */
   border-radius: 8px;
   margin-bottom: 10px;
   transition: background-color 0.3s;

@@ -40,7 +40,7 @@ const Resume = () => {
             <section id="resume" className="resume section">
                 {/* Section Title */}
                 <div className="container section-title" data-aos="fade-up">
-                    <h2>Resume</h2>
+                    <h2>Gigs</h2>
                     <p>
                         Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
                         aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
@@ -57,6 +57,7 @@ const Resume = () => {
                                 <div className="events-list">
                                     {upcomingEvents.map((event, index) => (
                                         <div className="event-item mb-4" key={index}>
+                                            <i className="bi bi-calendar-event"> </i> {/* Icono de calendario */}
                                             <div className="event-date text-primary">{event.date}</div>
                                             <div className="event-title fw-bold">{event.title}</div>
                                             <div className="event-location text-muted">{event.location}</div>

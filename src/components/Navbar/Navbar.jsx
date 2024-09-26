@@ -6,8 +6,8 @@ const menuItems = [
   { href: '#hero', icon: 'bi-house', label: 'Home' },
   { href: '#about', icon: 'bi-person', label: 'About' },
   { href: '#portfolio', icon: 'bi-images', label: 'Gallery' },
-  { href: '#services', icon: 'bi-hdd-stack', label: 'Sets' },
-  { href: '#resume', icon: 'bi-file-earmark-text', label: 'Gigs' },
+  { href: '#services', icon: 'bi-music-note-list', label: 'Sets' },
+  { href: '#resume', icon: 'bi bi-calendar-event', label: 'Gigs' },
   { href: '#contact', icon: 'bi-envelope', label: 'Contact' },
 ];
 
