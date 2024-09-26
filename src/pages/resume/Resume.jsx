@@ -15,7 +15,7 @@ const Resume = () => {
         },
         {
             date: 'Nov 16, 2024',
-            title: 'Great Sound Showcase, The Bow',
+            title: 'Great Sound Showcase, The Bow',
             location: 'Capital, Buenos Aires',
         },
         {
@@ -30,60 +30,56 @@ const Resume = () => {
         },
         {
             date: 'Nov 16, 2024',
-            title: 'Great Sound Showcase, The Bow',
+            title: 'Great Sound Showcase, The Bow',
             location: 'Capital, Buenos Aires',
         },
     ];
 
     return (
         <>
-            {/* Page Title */}
-            <div className="page-title" data-aos="fade">
-                <div className="heading">
+            <section id="resume" className="resume section">
+                {/* Section Title */}
+                <div className="container section-title" data-aos="fade-up">
+                    <h2>Resume</h2>
+                    <p>
+                        Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
+                        aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
+                        quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                        sit in iste officiis commodi quidem hic quas.
+                    </p>
+                </div>
+                {/* End Section Title */}
+                <section className="events-section">
                     <div className="container">
-                        <div className="row d-flex justify-content-center text-center">
-                            <div className="col-lg-8">
-                                <h1>Next Gigs</h1>
+                        <div className="row">
+                            {/* Columna de los eventos */}
+                            <div className="col-lg-6">
+                                <div className="events-list">
+                                    {upcomingEvents.map((event, index) => (
+                                        <div className="event-item mb-4" key={index}>
+                                            <div className="event-date text-primary">{event.date}</div>
+                                            <div className="event-title fw-bold">{event.title}</div>
+                                            <div className="event-location text-muted">{event.location}</div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Columna de la imagen */}
+                            <div className="col-lg-6">
+                                <div className="image-container text-center">
+                                    <img
+                                        src={img}
+                                        alt="Event Poster"
+                                        className="img-fluid rounded"
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <nav className="breadcrumbs">
-                    <div className="container"></div>
-                </nav>
-            </div>
-            {/* End Page Title */}
-
-            <section id="resume" className="events-section">
-                <div className="container">
-                    <div className="row">
-                        {/* Columna de los eventos */}
-                        <div className="col-lg-6">
-                            <div className="events-list">
-                                {upcomingEvents.map((event, index) => (
-                                    <div className="event-item mb-4" key={index}>
-                                        <div className="event-date">{event.date}</div>
-                                        <div className="event-title">{event.title}</div>
-                                        <div className="event-location">{event.location}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-
-                        {/* Columna de la imagen */}
-                        <div className="col-lg-6">
-                            <div className="image-container text-center">
-                                <img
-                                    src={img}
-                                    alt="Event Poster"
-                                    className="img-fluid"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </section>
+                {/* /Upcoming Gigs Section */}
             </section>
-            {/* /Upcoming Gigs Section */}
         </>
     );
 };

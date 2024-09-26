@@ -2,6 +2,7 @@
 
 export const initializeNavbarEvents = () => {
   const headerToggleBtn = document.querySelector('.header-toggle');
+  let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function headerToggle() {
     document.querySelector('#header').classList.toggle('header-show');
@@ -32,6 +33,28 @@ export const initializeNavbarEvents = () => {
     });
   });
 
+  /**
+   * Navmenu Scrollspy
+   */
+  function navmenuScrollspy() {
+    navmenulinks.forEach(navmenulink => {
+      if (!navmenulink.hash) return;
+      let section = document.querySelector(navmenulink.hash);
+      if (!section) return;
+      let position = window.scrollY + 200;
+      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
+        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
+        navmenulink.classList.add('active');
+      } else {
+        navmenulink.classList.remove('active');
+      }
+    });
+  }
+
+  // Add scrollspy functionality on page load and scroll
+  window.addEventListener('load', navmenuScrollspy);
+  document.addEventListener('scroll', navmenuScrollspy);
+
   return () => {
     // Cleanup event listeners
     if (headerToggleBtn) {
@@ -43,5 +66,9 @@ export const initializeNavbarEvents = () => {
     document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
       navmenu.removeEventListener('click', function () {});
     });
+
+    // Remove scrollspy event listeners
+    window.removeEventListener('load', navmenuScrollspy);
+    document.removeEventListener('scroll', navmenuScrollspy);
   };
 };

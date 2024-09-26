@@ -5,9 +5,9 @@ import { initializeNavbarEvents } from './helpers/navbarHelpers';
 const menuItems = [
   { href: '#hero', icon: 'bi-house', label: 'Home' },
   { href: '#about', icon: 'bi-person', label: 'About' },
-  { href: '#resume', icon: 'bi-file-earmark-text', label: 'Resume' },
-  { href: '#portfolio', icon: 'bi-images', label: 'Portfolio' },
-  { href: '#services', icon: 'bi-hdd-stack', label: 'Services' },
+  { href: '#portfolio', icon: 'bi-images', label: 'Gallery' },
+  { href: '#services', icon: 'bi-hdd-stack', label: 'Sets' },
+  { href: '#resume', icon: 'bi-file-earmark-text', label: 'Gigs' },
   { href: '#contact', icon: 'bi-envelope', label: 'Contact' },
 ];
 
